@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<title>A Pizzaria</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<style>
+@font-face{
+    font-family: "Amatic SC";
+    src: url(fonts/AmaticSC-Bold.ttf) format("truetype"),
+    url(fonts/AmaticSC-Regular.ttf) format("truetype");
+}
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("w3images/doceria.jpeg");
+  min-height: 90%;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">PAGINA INICIAL</a>
+    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button">SOBRE NÓS</a>
+    <a href="#contato" class="w3-bar-item w3-button">contatos</a>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">Aberto das 9h a 18h</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">DK<br>DOCES</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>DK<br>DOCES</b></span>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">cardapio</a></p>
+  </div>
+</header>
+
+
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">MENU DE DOCES</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">BOLOS</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">TRUFAS</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">BOBOM DE TRAVESSA</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>bolo de cenoura</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$125,50</span></h1>
+      <p class="w3-text-grey">massa branca, massa de chocolate</p>
+      <hr>
+   
+      <h1><b>bolo de leite ninho</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$150,00</span></h1>
+      <p class="w3-text-grey">trufado (musse de maracuja,morango,limão ou açai)</p>
+      <hr>
+      
+      <h1><b>bolo de travessa</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$105,50</span></h1>
+      <p class="w3-text-grey">oreo,ninho,doce de leite</p>
+      <hr>
+
+      <h1><b>bolo de banana</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$100</span></h1>
+      <p class="w3-text-grey">banana maça,banana prata,doce de leite,mel</p>
+      <hr>
+
+      <h1><b>petit gateau</b> <span class="w3-tag w3-red w3-round">lançamento!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$160,99</span></h1>
+      <p class="w3-text-grey">sorvetes:morango,limão,maracuja,trufano,chilete</p>
+      <hr>
+
+      <h1><b>bolo de laranja</b> <span class="w3-tag w3-grey w3-round">Novidade</span><span class="w3-right w3-tag w3-dark-grey w3-round">$130,00</span></h1>
+      <p class="w3-text-grey">suco da laranja,limão</p>
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b> beijinho</b> <span class="w3-tag w3-grey w3-round">tradicional</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$16,99</span></h1>
+      <p class="w3-text-grey">10un</p>
+      <hr>
+   
+      <h1><b> oreo</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$20,00</span></h1>
+      <p class="w3-text-grey">5un</p>
+      <hr>
+      
+      <h1><b>brigadeiro</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
+      <p class="w3-text-grey">4un</p>
+      <hr>
+
+      <h1><b>trufa sordida</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25.50</span></h1>
+      <p class="w3-text-grey">limão,brigadeiro,beijinho,maracuja,dois amores</p>
+    </div>
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>beijinho com brigadeiro</b> <span class="w3-tag w3-grey w3-round">Novidade</span><span class="w3-right w3-tag w3-dark-grey w3-round">$165,00</span></h1>
+      <p class="w3-text-grey">1kg, serve até 10 pessoas</p>
+      <hr>
+   
+      <h1><b>doce de leite e sorvete</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$125,99</span></h1>
+      <p class="w3-text-grey">500g, serve até 5 pessoas</p>
+      <hr>
+      
+      <h1><b>doce de abobora com limão</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$175,00</span></h1>
+      <p class="w3-text-grey">600g serve de 7 a 9 pessoas</p>
+      <hr>
+      
+      <h1><b>açai com limão</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$200,00</span></h1>
+      <p class="w3-text-grey">2kg serve até 20 pessoas</p>
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">sobre nós</h1>
+    <p>A DK Doces surgiu coma a nossa familia santos, onde todo mundo se reunia para apreciar os doces que a minha vó fazia, foi onde surgiu a grande ideia de montar a DK Doces que hoje é uma grande parte da nossa familia.</p>
+    <p><strong>dona?</strong> dienifer karolaine<img src="w3images/torta-limão-siciliano-frutas-vermelhas.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
+    <p>obrigado por ter chegado até aqui e aproveite o maximo dessa docuras</p>
+    <img src="w3images/familia.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+    <h1><b>horarios de funcionamento</b></h1>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>sabados e domigos fechado</p>
+        <p>segunda 9h - 18h</p>
+        <p>terça 9h - 18h</p>
+      </div>
+      <div class="w3-col s6">
+        <p>quarta 9h - 18h</p>
+        <p>quinta 9h - 18h</p>
+        <p>Sexta 9h - 18h</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="w3images/des.avif" class="w3-image w3-greyscale" style="width:100%;">
+
+<!-- Contact -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge" id="contato">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contato</h1>
+    <p>Para mais informações ligue 18981205856</p>
+    <p><span class="w3-tag">informações</span> oferecemos serviços para buffet, doces de casamentos entre outros serviços seja ele grande ou pequeno, mais estamos aqui para de oferecer o melhor serviço.</p>
+    <p class="w3-xxlarge"><strong></strong> faça o seu pedido ou nós envie um email:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" required name="Nome"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="quantos convidado" required name="convidado"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="data,hora,local" placeholder="data e hora" required name="data" value="2017-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="mensagem especial" required name="mensagem"></p>
+      <p><button class="w3-button w3-light-grey w3-block" type="enviar">enviar mensagem</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>DESENVOLVIDO POR <a href="https://www.DK DOCES.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">DIENIFER</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
